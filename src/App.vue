@@ -1,27 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">SenseApp</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><router-link to="/">Sensors</router-link></li>
+          <li><router-link to="/settings">Settings</router-link></li>
+          <li><router-link to="/system-info">System Info</router-link></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
   }
 });
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
