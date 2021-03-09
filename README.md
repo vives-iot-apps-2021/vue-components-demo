@@ -1,4 +1,4 @@
-# vue-router-demo
+# vuex-demo
 
 ## Project setup
 ```
