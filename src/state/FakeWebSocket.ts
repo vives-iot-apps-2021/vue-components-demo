@@ -57,8 +57,27 @@ export default class WebSocket {
         if(this.callback){
           this.callback(JSON.stringify({
             data: {
-              system_info: {
-                foo: 'bar'
+              system_info: { 
+                "version": "0.3.1",
+                "os": "Linux-5.10.11-v7l+-armv7l-with-debian-10.7",
+                "hostname": "fake-websocket",
+                "network": { 
+                  "wlan0": { 
+                    "mac": "dc:a6:32:55:4f:bf", 
+                    "ip": "192.168.1.124" 
+                  },
+                  "eth0": {
+                    "mac": "dc:a6:32:55:4f:bd",
+                    "ip": null 
+                  } 
+                }, 
+                "python": { 
+                  "version": "3.7.3 (default, Jul 25 2020, 13:03:44) " 
+                }, 
+                "node": { 
+                  "version": "v15.8.0" 
+                }, 
+                "uptime": "up 1 week, 4 days, 1 hour, 53 minutes" 
               }
             }
           }))
