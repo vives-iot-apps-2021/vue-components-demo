@@ -65,7 +65,7 @@ export default createStore({
     (store: Store<State>) => {
       // TODO: SHOULD NOT BE ANY !!!!!! Needs fix (GitHub Stickers?!)
       store.state.ws.addEventListener('message', (message: any) => {
-        console.log(message.data)
+        console.log(JSON.parse(message).data)
         store.dispatch('parseMessage', JSON.parse(message).data)
       })
     }
